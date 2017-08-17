@@ -1,0 +1,39 @@
+body {
+  background: #f0ead6;
+  font-family: 'Slabo 27px', serif;
+  margin-top: 250px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  width: 250px;
+  float: right;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  margin-top: 30px;
+  max-width: 470px;
+}
+
+.links {
+  margin-top: 35px;
+  font-size: 20px;
+}
+
+a {
+  color: #686c6d;
+}
+
+a:hover {
+  color: #c5a706;
+}
