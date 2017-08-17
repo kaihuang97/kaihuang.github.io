@@ -8,12 +8,16 @@ body {
     max-width: 800px;
 }
 
+.profile {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .img-circle {
     border-radius: 50%;
     max-width: 100%;
     height: auto;
-    width: 256px;
-    float: right;
+    width: 300px;
 }
 
 h1 {
@@ -36,4 +40,13 @@ a {
 
 a:hover {
     color: #c5a706;
+}
+
+.pic {
+    padding-left: 40px;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
 }
