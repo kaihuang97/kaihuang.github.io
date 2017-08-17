@@ -1,39 +1,39 @@
 body {
-  background: #f0ead6;
-  font-family: 'Slabo 27px', serif;
-  margin-top: 250px;
+    background: #f0ead6;
+    font-family: 'Slabo 27px', serif;
+    margin-top: 250px;
 }
 
 .container {
-  max-width: 800px;
+    max-width: 800px;
 }
 
 .img-circle {
-  border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-  width: 250px;
-  float: right;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    width: 256px;
+    float: right;
 }
 
 h1 {
-  font-size: 85px;
+    font-size: 85px;
 }
 
 h2 {
-  margin-top: 30px;
-  max-width: 450px;
+    margin-top: 30px;
+    max-width: 450px;
 }
 
 .links {
-  margin-top: 35px;
-  font-size: 20px;
+    margin-top: 35px;
+    font-size: 20px;
 }
 
 a {
-  color: #686c6d;
+    color: #686c6d;
 }
 
 a:hover {
-  color: #c5a706;
+    color: #c5a706;
 }
