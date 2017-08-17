@@ -4,14 +4,11 @@ body {
     margin-top: 250px;
 }
 
-.container {
-    max-width: 800px;
-}
-
 .profile {
     display: table-cell;
     vertical-align: middle;
 }
+
 
 .img-circle {
     border-radius: 50%;
