@@ -4,17 +4,24 @@ body {
     margin-top: 250px;
 }
 
+.container {
+    max-width: 820px;
+}
+
 .profile {
     display: table-cell;
     vertical-align: middle;
 }
-
 
 .img-circle {
     border-radius: 50%;
     max-width: 100%;
     height: auto;
     width: 300px;
+}
+
+.pic {
+    padding-left: 40px;
 }
 
 h1 {
@@ -39,11 +46,3 @@ a:hover {
     color: #c5a706;
 }
 
-.pic {
-    padding-left: 40px;
-}
-
-.col-center {
-    float: none;
-    margin: 0 auto;
-}
