@@ -4,6 +4,10 @@ body {
     margin-top: 150px;
 }
 
+#content {
+    display: none;
+}
+
 .container {
     max-width: 820px;
 }
@@ -45,4 +49,3 @@ a {
 a:hover {
     color: #c5a706;
 }
-
