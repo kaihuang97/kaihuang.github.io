@@ -24,8 +24,6 @@ a:hover {
     text-decoration: none;
 }
 
-#fade {}
-
 .container {
     max-width: 800px;
     display: none;
@@ -38,9 +36,8 @@ a:hover {
 
 .img-circle {
     border-radius: 50%;
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
-    width: 300px;
 }
 
 .pic {
