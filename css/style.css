@@ -24,12 +24,11 @@ a:hover {
     text-decoration: none;
 }
 
-#content {
-    display: none;
-}
+#fade {}
 
 .container {
     max-width: 800px;
+    display: none;
 }
 
 .profile {
