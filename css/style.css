@@ -1,7 +1,27 @@
 body {
     background: #f0ead6;
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Rubik', sans-serif;
+    /*font-family: 'Slabo 27px', serif;*/
     margin-top: 150px;
+}
+
+h1 {
+    font-size: 85px;
+}
+
+h2 {
+    margin-top: 30px;
+    max-width: 450px;
+}
+
+a {
+    color: #686c6d;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #c5a706;
+    text-decoration: none;
 }
 
 #content {
@@ -28,24 +48,7 @@ body {
     padding-left: 40px;
 }
 
-h1 {
-    font-size: 85px;
-}
-
-h2 {
-    margin-top: 30px;
-    max-width: 450px;
-}
-
 .links {
     margin-top: 35px;
     font-size: 20px;
-}
-
-a {
-    color: #686c6d;
-}
-
-a:hover {
-    color: #c5a706;
 }
