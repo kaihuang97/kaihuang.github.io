@@ -11,21 +11,11 @@ h1 {
 h2 {
     font-size: 26px;
     margin-top: 30px;
-    max-width: 450px;
-}
-
-a {
-    color: #686c6d;
-    font-size: 20px;
-}
-
-a:hover {
-    color: #c5a706;
-    text-decoration: none;
+    max-width: 500px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 850px;
     display: none;
 }
 
@@ -48,4 +38,66 @@ a:hover {
 .links {
     margin-top: 35px;
     font-size: 20px;
+}
+
+.links a {
+    color: #686c6d;
+    font-size: 20px;
+}
+
+.links a:hover {
+    color: #c5a706;
+    text-decoration: none;
+}
+
+.btnOpen a {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    color: #111111;
+}
+
+.btnOpen a:hover {
+    color: #686c6d;
+}
+
+.navmenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #373737;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.navmenu a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #9d9d9d;
+    display: block;
+    transition: 0.3s;
+}
+
+.navmenu a:hover {
+    color: #f1f1f1;
+}
+
+.navmenu .btnClose {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-right 0.5s;
+    padding: 20px;
 }

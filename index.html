@@ -10,25 +10,36 @@
 </head>
 
 <body>
-    <script>
-        $(document).ready(function() {
-            $('.container').fadeIn(1800);
-        });
-    </script>
+    <script src="navmenu.js"></script>
     <script src="https://use.fontawesome.com/5beaca88f1.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <div class="container">
-        <div class="profile">
-            <h1 class="name">Kai Huang</h1>
-            <h2>I am a Computer Systems Engineer &amp; web developer at UC Santa Cruz.</h2>
-            <div class="links">
-                <a href="/KaiHuangResume.pdf"><i class="fa fa-paperclip"></i> Resume</a> &nbsp;
-                <a href="mailto:kaihuang@ucsc.edu"><i class="fa fa-envelope"></i> Email</a> &nbsp;
-                <a href="https://github.com/kaihuang97"><i class="fa fa-github"></i> Github</a>
+    <div id="nav" class="navmenu">
+        <a href="#" class="btnClose" onclick="closeMenu()"><i class="fa fa-times"></i></a>
+        <a href="#">Projects</a>
+    </div>
+
+    <div id="main">
+        <script>
+            $(document).ready(function() {
+                $('.container').fadeIn(1800);
+            });
+        </script>
+        <div class="container">
+            <div class="btnOpen">
+                <a href="#" onclick="openMenu()"><i class="fa fa-bars"></i></a>
             </div>
-        </div>
-        <div class="profile pic">
-            <img class="img-circle" src="/profile-pic.jpg">
+            <div class="profile">
+                <h1 class="name">Kai Huang</h1>
+                <h2>I am an asipiring Computer Systems &amp; Software Engineer at UC Santa Cruz.</h2>
+                <div class="links">
+                    <a href="/KaiHuangResume.pdf"><i class="fa fa-paperclip"></i> Resume</a> &nbsp;
+                    <a href="mailto:kaihuang@ucsc.edu"><i class="fa fa-envelope"></i> Email</a> &nbsp;
+                    <a href="https://github.com/kaihuang97"><i class="fa fa-github"></i> Github</a>
+                </div>
+            </div>
+            <div class="profile pic">
+                <img class="img-circle" src="/profile-pic.jpg">
+            </div>
         </div>
     </div>
 </body>
