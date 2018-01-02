@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Calculator</title>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Salary Calculator</h1>
+        <div>
+            <p class="lead">If you make...</p>
+            <p class="lead">
+                $ <input id="salary" type="text">
+                <span class="year-label">per year</span>
+            </p>
+        </div>
+
+        <div>
+            <p class="lead">You would make about...</p>
+            <p class="lead">
+                <span id="month">$ ____</span><span class="month-label"> per month</span><br>
+                <span id="hour">$ ____</span><span class="hour-label"> per hour</span>
+            </p>
+        </div>
+    </div>
+
+    <script src='https://rawgit.com/SamWM/jQuery-Plugins/master/numeric/jquery.numeric.js'></script>
+    <script src="salary.js"></script>
+
+</body>
+
+</html>

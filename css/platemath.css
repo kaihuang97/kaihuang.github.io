@@ -1,53 +1,23 @@
 body {
     background: #f0ead6;
+    margin-top: 100px;
     font-family: 'Rubik', sans-serif;
-    margin-top: 150px;
-}
-
-h1 {
-    font-size: 80px;
-}
-
-h2 {
-    font-size: 26px;
-    margin-top: 30px;
-    max-width: 500px;
-}
-
-.container {
-    max-width: 850px;
-    display: none;
-}
-
-.profile {
-    display: table-cell;
-    vertical-align: middle;
+    color: #2E3640;
     text-align: center;
 }
 
-.img-circle {
-    border-radius: 50%;
-    max-width: 300px;
-    height: auto;
+h1 {
+    margin-bottom: 3rem;
+    font-size: 80px;
 }
 
-.pic {
-    padding-left: 40px;
+.ask {
+    font-size: 26px;
 }
 
-.links {
-    margin-top: 35px;
+.output {
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
-}
-
-.links a {
-    color: #686c6d;
-    font-size: 20px;
-}
-
-.links a:hover {
-    color: #c5a706;
-    text-decoration: none;
 }
 
 .btnOpen a {

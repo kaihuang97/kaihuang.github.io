@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Kai Huang</title>
+    <title>PlateMath</title>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/platemath.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/5beaca88f1.js"></script>
@@ -22,31 +22,30 @@
             <a href="platemath.html">PlateMath</a>
         </div>
     </div>
-
     <div id="main">
-        <script>
-            $(document).ready(function() {
-                $('.container').fadeIn(1800);
-            });
-        </script>
         <div class="container">
             <div class="btnOpen">
                 <a href="#" onclick="openMenu()"><i class="fa fa-bars"></i></a>
             </div>
-            <div class="profile">
-                <h1 class="name">Kai Huang</h1>
-                <h2>I am an asipiring Computer Systems &amp; Software Engineer at UC Santa Cruz.</h2>
-                <div class="links">
-                    <a href="/KaiHuangResume.pdf"><i class="fa fa-paperclip"></i> Resume</a> &nbsp;
-                    <a href="mailto:kaihuang@ucsc.edu"><i class="fa fa-envelope"></i> Email</a> &nbsp;
-                    <a href="https://github.com/kaihuang97"><i class="fa fa-github"></i> Github</a>
-                </div>
+            <h1>PlateMath</h1>
+            <div class="ask">
+                <p>What's the weight?</p>
+                <p><input id="weight" type="text" size="3">
+                    <span>pounds</span></p>
             </div>
-            <div class="profile pic">
-                <img class="img-circle" src="/profile-pic.jpg">
-            </div>
+            <div class="output">
+                <p id="need"></p>
+                <p>
+                    <span id="p45"></span><br>
+                    <span id="p25"></span><br>
+                    <span id="p10"></span><br>
+                    <span id="p5"></span><br>
+                    <span id="p2">
+            </p>
         </div>
     </div>
+    <script src='https://rawgit.com/SamWM/jQuery-Plugins/master/numeric/jquery.numeric.js'></script>
+    <script src="platemath.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 
