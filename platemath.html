@@ -30,7 +30,7 @@
             <h1>PlateMath</h1>
             <div class="ask">
                 <p>What's the weight?</p>
-                <p><input id="weight" type="text" size="3">
+                <p><input name="lb" id="weight" type="text" size="3">
                     <span>pounds</span></p>
             </div>
             <div class="output">
@@ -41,12 +41,19 @@
                     <span id="p10"></span><br>
                     <span id="p5"></span><br>
                     <span id="p2">
-            </p>
+                </p>
+            </div>
         </div>
     </div>
+    
+    <div class="footer">
+        <p>* Weight is rounded to nearest 5 lbs.</p>
+    </div>
+    
     <script src='https://rawgit.com/SamWM/jQuery-Plugins/master/numeric/jquery.numeric.js'></script>
     <script src="platemath.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</script>
 </body>
 
 </html>

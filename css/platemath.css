@@ -20,6 +20,10 @@ h1 {
     font-size: 20px;
 }
 
+.footer {
+    margin-top: 2rem;
+}
+
 .btnOpen a {
     position: absolute;
     top: 5px;

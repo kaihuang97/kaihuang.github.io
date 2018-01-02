@@ -2,17 +2,39 @@ var weightInput = $('input[id="weight"]').numeric({
     negative: false
 });
 
+$('input[id="weight"]').keyup(function () {
+    if ($(this).val() < 45) {
+        $('.output').hide();
+    } else {
+        $('.output').show();
+    }
+}).keyup();
+
 var p45 = 0,
     p25 = 0,
     p10 = 0,
     p5 = 0,
-    p2 = 0;
+    p2 = 0,
+    roundedWeight = 0;
 
 weightInput.keyup(function () {
-    var wobar = ($(this).val() - 45) / 2;
-    platesNeeded(p45, p25, p10, p5, p2);
-    calculate(wobar);
+    var withbar = $(this).val();
+    var wobar = (withbar - 45) / 2;
+    platesNeeded(roundedWeight, p45, p25, p10, p5, p2);
+    calculate(checkWeight(wobar));
 });
+
+function checkWeight(wobar) {
+    if (wobar < 0) {
+        roundedWeight = 0;
+    } else {
+        if (wobar % 2.5 != 0) {
+            wobar = round5(wobar);
+        }
+        roundedWeight = (wobar * 2) + 45;
+    }
+    return wobar;
+}
 
 function calculate(wobar) {
     if (wobar - 45 >= 0) {
@@ -32,17 +54,26 @@ function calculate(wobar) {
         calculate(wobar - 2.5);
     }
     if (wobar == 0) {
-        platesNeeded(p45, p25, p10, p5, p2);
-        p45 = 0;
-        p25 = 0;
-        p10 = 0;
-        p5 = 0;
-        p2 = 0;
+        platesNeeded(roundedWeight, p45, p25, p10, p5, p2);
+        reset();
     }
 }
 
-function platesNeeded(p45, p25, p10, p5, p2) {
-    $("#need").html('You would need...');
+function reset() {
+    p45 = 0;
+    p25 = 0;
+    p10 = 0;
+    p5 = 0;
+    p2 = 0;
+    roundedWeight = 0;
+}
+
+function round5(wobar) {
+    return Math.round(wobar / 2.5) * 2.5;
+}
+
+function platesNeeded(roundedWeight, p45, p25, p10, p5, p2) {
+    $("#need").html('For ' + roundedWeight + ' lbs, you would need...');
     $("#p45").html(p45 + ' set' + ((p45 > 1 || p45 == 0) ? 's' : '') + ' of 45 lb plates');
     $("#p25").html(p25 + ' set' + ((p25 > 1 || p25 == 0) ? 's' : '') + ' of 25 lb plates');
     $("#p10").html(p10 + ' set' + ((p10 > 1 || p10 == 0) ? 's' : '') + ' of 10 lb plates');
