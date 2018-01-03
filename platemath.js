@@ -1,21 +1,14 @@
-var weightInput = $('input[id="weight"]').numeric({
-    negative: false
-});
-
-$('input[id="weight"]').keyup(function () {
-    if ($(this).val() < 45) {
-        $('.output').hide();
-    } else {
-        $('.output').show();
-    }
-}).keyup();
-
+// add functions later dealing with user inputted bar weight and plates, etc
 var p45 = 0,
     p25 = 0,
     p10 = 0,
     p5 = 0,
     p2 = 0,
     roundedWeight = 0;
+
+var weightInput = $('input[id="weight"]').numeric({
+    negative: false
+});
 
 weightInput.keyup(function () {
     var withbar = $(this).val();
@@ -24,6 +17,7 @@ weightInput.keyup(function () {
     calculate(checkWeight(wobar));
 });
 
+// checks if weight >= 45
 function checkWeight(wobar) {
     if (wobar < 0) {
         roundedWeight = 0;
@@ -36,6 +30,21 @@ function checkWeight(wobar) {
     return wobar;
 }
 
+function reset() {
+    p45 = 0;
+    p25 = 0;
+    p10 = 0;
+    p5 = 0;
+    p2 = 0;
+    roundedWeight = 0;
+}
+
+// rounding down to nearest 5 
+function round5(wobar) {
+    return Math.round(wobar / 2.5) * 2.5;
+}
+
+// recursive function to calculate num of plates 
 function calculate(wobar) {
     if (wobar - 45 >= 0) {
         p45++;
@@ -59,24 +68,26 @@ function calculate(wobar) {
     }
 }
 
-function reset() {
-    p45 = 0;
-    p25 = 0;
-    p10 = 0;
-    p5 = 0;
-    p2 = 0;
-    roundedWeight = 0;
-}
+// dealing with hiding need where weight = barbell
+$('input[id="weight"]').keyup(function () {
+    if ($(this).val() < 45) {
+        $('.output').hide();
+    } else {
+        $('.output').show();
+    }
+}).keyup();
 
-function round5(wobar) {
-    return Math.round(wobar / 2.5) * 2.5;
-}
-
+// printing according to html tags
 function platesNeeded(roundedWeight, p45, p25, p10, p5, p2) {
+    var print45 = p45 + ' set' + ((p45 > 1 || p45 == 0) ? 's ' : '') + ' of 45 lb plates<br>';
+    var print25 = p25 + ' set' + ((p25 > 1 || p25 == 0) ? 's' : '') + ' of 25 lb plates<br>';
+    var print10 = p10 + ' set' + ((p10 > 1 || p10 == 0) ? 's' : '') + ' of 10 lb plates<br>';
+    var print5 = p5 + ' set' + ((p5 > 1 || p5 == 0) ? 's' : '') + ' of 5 lb plates<br>';
+    var print2 = p2 + ' set' + ((p2 > 1 || p2 == 0) ? 's' : '') + ' of 2.5 lb plates';
     $("#need").html('For ' + roundedWeight + ' lbs, you would need...');
-    $("#p45").html(p45 + ' set' + ((p45 > 1 || p45 == 0) ? 's' : '') + ' of 45 lb plates');
-    $("#p25").html(p25 + ' set' + ((p25 > 1 || p25 == 0) ? 's' : '') + ' of 25 lb plates');
-    $("#p10").html(p10 + ' set' + ((p10 > 1 || p10 == 0) ? 's' : '') + ' of 10 lb plates');
-    $("#p5").html(p5 + ' set' + ((p5 > 1 || p5 == 0) ? 's' : '') + ' of 5 lb plates');
-    $("#p2").html(p2 + ' set' + ((p2 > 1 || p2 == 0) ? 's' : '') + ' of 2.5 lb plates');
+    $("#p45").html((p45 != 0) ? print45 : '');
+    $("#p25").html((p25 != 0) ? print25 : '');
+    $("#p10").html((p10 != 0) ? print10 : '');
+    $("#p5").html((p5 != 0) ? print5 : '');
+    $("#p2").html((p2 != 0) ? print2 : '');
 }
