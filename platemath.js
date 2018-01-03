@@ -79,7 +79,7 @@ $('input[id="weight"]').keyup(function () {
 
 // printing according to html tags
 function platesNeeded(roundedWeight, p45, p25, p10, p5, p2) {
-    var print45 = p45 + ' set' + ((p45 > 1 || p45 == 0) ? 's ' : '') + ' of 45 lb plates<br>';
+    var print45 = p45 + ' set' + ((p45 > 1 || p45 == 0) ? 's' : '') + ' of 45 lb plates<br>';
     var print25 = p25 + ' set' + ((p25 > 1 || p25 == 0) ? 's' : '') + ' of 25 lb plates<br>';
     var print10 = p10 + ' set' + ((p10 > 1 || p10 == 0) ? 's' : '') + ' of 10 lb plates<br>';
     var print5 = p5 + ' set' + ((p5 > 1 || p5 == 0) ? 's' : '') + ' of 5 lb plates<br>';
