@@ -38,6 +38,9 @@ h1 {
     transition: 0.3s;
 }
 
+
+/* navigation menu */
+
 .navmenu {
     height: 100%;
     width: 0;
@@ -52,13 +55,15 @@ h1 {
 }
 
 .navmenu a {
-    text-align: center;
+    padding: 0px 0px 0px 15px;
     font-size: 25px;
     color: #9d9d9d;
     display: block;
+    text-align: left;
 }
 
 .navmenu a:hover {
+    padding: 0px 0px 0px 13px;
     color: #f1f1f1;
     transition: 0.3s;
     text-decoration: none;
@@ -68,6 +73,26 @@ h1 {
     background: #444444;
     transition: 0.5s;
 }
+
+.navmenu li {
+    background: #444444;
+    display: block;
+    padding-left: 15px;
+}
+
+
+/*
+.navmenu .colmenu:before {
+    font-family: FontAwesome;
+    content: "\f067";
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.navmenu .colmenu.active:before {
+    content: "\f068";
+}
+*/
 
 .navmenu .btnClose {
     position: absolute;
