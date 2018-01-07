@@ -75,24 +75,28 @@ h1 {
 }
 
 .navmenu li {
-    background: #444444;
     display: block;
-    padding-left: 15px;
 }
 
+.navmenu a.current-page {
+    background: #444444;
+    padding-left: 40px;
+}
 
-/*
+.navmenu a.current-page:hover {
+    padding-left: 38px;
+}
+
 .navmenu .colmenu:before {
     font-family: FontAwesome;
-    content: "\f067";
-    padding-right: 10px;
+    content: "\f068";
+    padding: 0px 10px 0px 3px;
     font-size: 15px;
 }
 
-.navmenu .colmenu.active:before {
-    content: "\f068";
+.navmenu .colmenu.collapsed:before {
+    content: "\f067";
 }
-*/
 
 .navmenu .btnClose {
     position: absolute;
