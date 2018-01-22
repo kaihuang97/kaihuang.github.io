@@ -1,20 +1,32 @@
 $(document).ready(function () {
     // wanted experience with api instead of using built-in geolocation
-    // ip-api for location using ip address
+    // google geolocation api for location using ip address
+    var googleKey = "AIzaSyC25E0b1HLdvV6MPhL0WOXFyobHOq3Uch8";
     $.ajax({
-        type: "GET",
-        url: "http://ip-api.com/json",
+        type: "POST",
+        url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + googleKey,
         success: location
     });
     // feeds coordinates into dark sky api 
     function location(data) {
+        //console.log(data.location);
         var darkSkyURL = "https://api.darksky.net/forecast/e5d936bd471e33d6600f3ec145250457/";
-        var location = data.lat + "," + data.lon;
-        var city = data.city;
-        var region = data.region;
+        var location = data.location.lat + "," + data.location.lng;
         var darkSkyAPI = darkSkyURL + location;
-        $("#currentLocation").text(city + ", " + region);
         weather(darkSkyAPI);
+        console.log(location);
+        $.ajax({
+            type: "POST",
+            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location + "&key=YOUR_API_KEY" + googleKey,
+            success: citystate
+        })
+        // obtains city and state information from google reverse geocoding request
+        function citystate(data) {
+            console.log(data.results.address_components);
+            var city = data.city;
+            var region = data.region;
+            $("#currentLocation").text(city + ", " + region);
+        }
     }
     // calls dark sky api
     function weather(darkSkyAPI) {

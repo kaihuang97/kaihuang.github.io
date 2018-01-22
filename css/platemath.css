@@ -83,10 +83,6 @@ h1 {
     background: #444444;
 }
 
-.navmenu a.current-page:hover {
-    padding-left: 38px;
-}
-
 .navmenu .colmenu:before {
     font-family: FontAwesome;
     content: "\f068";
