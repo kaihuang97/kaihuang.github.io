@@ -1,53 +1,56 @@
 body {
-    background: #f0ead6;
-    font-family: 'Rubik', sans-serif;
-    margin-top: 150px;
-}
-
-h1 {
-    font-size: 80px;
-}
-
-h2 {
-    font-size: 26px;
-    margin-top: 30px;
-    max-width: 500px;
-}
-
-.container {
-    max-width: 850px;
-    display: none;
-}
-
-.profile {
-    display: table-cell;
-    vertical-align: middle;
+    color: white;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
 }
 
-.img-circle {
-    border-radius: 50%;
-    max-width: 300px;
-    height: auto;
+.weather {
+    width: 600px;
+    background: rgba(51, 51, 51, 0.3);
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.pic {
-    padding-left: 40px;
+.data {
+    height: 200px;
+    margin: 0px 20px 0px 20px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.links {
-    margin-top: 35px;
-    font-size: 20px;
+#temperature {
+    font-size: 110px;
 }
 
-.links a {
-    color: #686c6d;
-    font-size: 20px;
+#place {
+    margin-top: -10px;
 }
 
-.links a:hover {
-    color: #c5a706;
-    text-decoration: none;
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 5px 10px 5px;
+}
+
+footer {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    text-shadow: 0 0 0.3em #000;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none !important;
 }
 
 .btnOpen a {
@@ -68,6 +71,7 @@ h2 {
 /* navigation menu */
 
 .navmenu {
+    font-family: 'Rubik', sans-serif;
     height: 100%;
     width: 0;
     position: fixed;
@@ -85,6 +89,7 @@ h2 {
     font-size: 25px;
     color: #9d9d9d;
     display: block;
+    text-align: left;
 }
 
 .navmenu a:hover {

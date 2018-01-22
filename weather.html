@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <script src="https://use.fontawesome.com/17f35c8460.js"></script>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/weather.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script src="https://use.fontawesome.com/5beaca88f1.js"></script>
+    <script src="js/navmenu.js"></script>
+</head>
+
+<body>
+    <div id="nav" class="navmenu">
+        <a href="#" class="btnClose" onclick="closeMenu()"><i class="fa fa-times"></i></a>
+        <a href="index.html">Kai</a>
+        <a class="colmenu" data-toggle="collapse" href="#projects">Projects</a>
+        <div class="collapse show" id="projects">
+            <li><a href="platemath.html">PlateMath</a></li>
+            <li><a class="current-page" href="weather.html">Weather</a></li>
+        </div>
+    </div>
+    <div id="main">
+        <div class="btnOpen">
+            <a href="#" onclick="openMenu()"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="weather">
+            <div class="data">
+                <div id="temperature"></div>
+                <div id="place">
+                    <i class="fa fa-map-marker"></i>
+                    <span id="currentLocation"></span>
+                </div>
+            </div>
+            <div class="icon">
+                <canvas id="skycon" width="250px" height="250px"></canvas>
+            </div>
+        </div>
+
+        <footer>
+            <small>Photo by <a class="user" href="#"></a> // <a href="https://unsplash.com">Unsplash</a></small>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://rawgithub.com/darkskyapp/skycons/master/skycons.js'></script>
+    <script src="js/weather.js"></script>
+
+</body>
+
+</html>

@@ -76,11 +76,11 @@ h1 {
 
 .navmenu li {
     display: block;
+    text-indent: 25px;
 }
 
 .navmenu a.current-page {
     background: #444444;
-    padding-left: 40px;
 }
 
 .navmenu a.current-page:hover {
