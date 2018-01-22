@@ -1,10 +1,10 @@
 $(document).ready(function () {
     // wanted experience with api instead of using built-in geolocation
     // google geolocation api for location using ip address
-    var googleKey = "AIzaSyC25E0b1HLdvV6MPhL0WOXFyobHOq3Uch8";
+    var googleKey1 = "AIzaSyC25E0b1HLdvV6MPhL0WOXFyobHOq3Uch8";
     $.ajax({
         type: "POST",
-        url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + googleKey,
+        url: "https://www.googleapis.com/geolocation/v1/geolocate?key=" + googleKey1,
         success: location
     });
     // feeds coordinates into dark sky api 
@@ -15,17 +15,30 @@ $(document).ready(function () {
         var darkSkyAPI = darkSkyURL + location;
         weather(darkSkyAPI);
         console.log(location);
+        var googleKey2 = "AIzaSyDXydEnzljplrQ2CZXgt3vMkUudHHIAOCY";
         $.ajax({
-            type: "POST",
-            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location + "&key=YOUR_API_KEY" + googleKey,
+            type: "GET",
+            url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + location + "&key=" + googleKey2,
             success: citystate
         })
         // obtains city and state information from google reverse geocoding request
         function citystate(data) {
-            console.log(data.results.address_components);
-            var city = data.city;
-            var region = data.region;
-            $("#currentLocation").text(city + ", " + region);
+            //console.log(data.results[0].address_components);
+            var results = data.results;
+            for (var i = 0; i < results[0].address_components.length; i++) {
+                var loc = results[0].address_components[i];
+                switch (loc.types[0]) {
+                    case 'locality':
+                        var city = loc.long_name;
+                        break;
+                    case 'administrative_area_level_1':
+                        var state = loc.short_name;
+                        break;
+                }
+            };
+            //console.log(city);
+            //console.log(state);
+            $("#currentLocation").text(city + ", " + state);
         }
     }
     // calls dark sky api
